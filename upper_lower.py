@@ -1,7 +1,10 @@
+word = ("jack")
 
+half = int(round((len(word) / 2), 0))
 
-def main():
-    pass
+length = int(len(word))
+firsthalf = word[0:half]
 
-if __name__ == '__main__':
-    main()
+secondhalf = str(word[half:length])
+
+print(secondhalf + firsthalf)
