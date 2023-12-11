@@ -1,13 +1,29 @@
 import time
+import random
+given_sentence = random.randint(0,3)
+chosen_sentence = ["hello", "rahh", "bruh", "ahhh"]
+sentence_to_type = chosen_sentence[given_sentence]
 
+def funtypy():
+    print("This is a typing test. please try to type the following sentence as quickly and as accurately as possible.")
+    time.sleep(3)
+    print("")
+    print("the sentence is:")
+    print("")
+    time.sleep(2)
+    print(sentence_to_type)
+    print("")
+    print("The timer starts in:")
+    time.sleep(1)
+    print("3")
+    time.sleep(1)
+    print("2")
+    time.sleep(1)
+    print("1")
+    time.sleep(1)
+    print("GO!")
+    print(sentence_to_type)
 
-given_sentence = "Hello"
-print(given_sentence)
-print("")
-starttime = time.time()
-
-character_split = list(given_sentence.split())
-print(len(character_split))
 user_type = input("retype that nerd: ")
 
 
@@ -16,21 +32,11 @@ if user_type == "Hello":
 else:
     print("no")
 
-'''
-# Timer starts
-def is_duplicates(user_type):
 
-    for x in range(len(user_type)):                             # This line creates the outer loop. "x" will take on each variable in the list every time it goes through the loop.
-        for y in range(x + 1,len(given_sentence)):                   # This line creates the nested loop. the variable "y" will take on each variable except for the one that is assigned to x, so that the numbers are not compared to themselves.
-            if user_type[x] == given_sentence[y]:                    # Tests to see if the two variables, which each have a birthday assigned to them, are equal.
-                return True
-    return False
-duplicate_count = 0
-for z in range(1):                                                   # This creates another loop that will run the amount of times the user entered. this loop is where all the code is called basically                                                    # Assigns the list to the variable birthdays.
-    if is_duplicates(user_type):                                                    # If is_duplicates returned true, the code will add one to the tally of duplicates.
-        duplicate_count += 1
-print(duplicate_count)
-'''
-totaltime = round((time.time() - starttime), 2)
+def main():
+    funtypy()
+    starttime = time.time()
+    totaltime = round((time.time() - starttime), 2)
+    print("Total Time: " + str(totaltime))
 
-print("Total Time: " + str(totaltime))
+main()
